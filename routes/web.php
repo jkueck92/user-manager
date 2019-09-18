@@ -19,8 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/users', 'UserController');
+Route::resource('/users', 'UserController')->middleware('auth');;
 
-Route::resource('/roles', 'RoleController');
+Route::resource('/roles', 'RoleController')->middleware('auth');;
 
-Route::resource('/permissions', 'PermissionController');
+Route::resource('/permissions', 'PermissionController')->middleware('auth');;
